@@ -1,1 +1,11 @@
+// =====================================
+// Top Attacker IP Addresses
+// =====================================
+// Identifies source IPs responsible for the
+// highest number of failed logon attempts.
+
+SecurityEvent
+| where EventID == 4625
+| summarize FailedAttempts = count() by IPAddress
+| order by FailedAttempts desc
 
