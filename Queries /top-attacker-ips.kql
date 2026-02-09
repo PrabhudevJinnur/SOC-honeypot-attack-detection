@@ -6,6 +6,9 @@
 
 SecurityEvent
 | where EventID == 4625
-| summarize FailedAttempts = count() by IpAddress
+| where isnotempty(IpAddress)
+| extend AttackerIP = IpAddress
+| summarize FailedAttempts = count() by AttackerIP
 | order by FailedAttempts desc
+
 
