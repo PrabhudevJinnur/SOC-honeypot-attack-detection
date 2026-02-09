@@ -1,1 +1,17 @@
+// =====================================
+// Failed Logon Attempts (Event ID 4625)
+// =====================================
+// Identifies failed authentication attempts
+// against the internet-facing Windows VM.
+
+SecurityEvent
+| where EventID == 4625
+| project
+    TimeGenerated,
+    Computer,
+    Account,
+    IPAddress,
+    LogonType,
+    FailureReason
+| order by TimeGenerated desc
 
