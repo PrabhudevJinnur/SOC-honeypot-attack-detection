@@ -40,8 +40,8 @@ Event ID 4625 is commonly associated with brute-force authentication activity an
 Detection & Analysis
 Log analysis was performed using KQL to identify and investigate failed authentication attempts.
 Example Query – Failed Logons
-[Failed Logons](screenshots/log-analytics-failed-logons.png)
-[Top Attacker IPs](screenshots/top-attacker-ips.png)
+[Failed Logons](screenshots/log-analytics-failed-logons)
+[Top Attacker IPs](screenshots/top-attacker-ips)
 
 SecurityEvent
 | where EventID == 4625
@@ -75,7 +75,7 @@ Relative attack volume by region
 Concentrated brute-force activity from specific locations
 
 This demonstrates how quickly exposed systems are discovered and targeted once accessible from the internet.
-[Attack Map](screenshots/sentinel-attack-map.png)
+[Attack Map](screenshots/sentinel-attack-map)
 
 
 Key Findings
