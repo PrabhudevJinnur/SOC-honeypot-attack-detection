@@ -24,6 +24,7 @@ Microsoft Sentinel (SIEM)
 Used for querying, analysis, and visualization.
 
 All components were deployed within a single Azure resource group for easy management and teardown.
+![SOC Architecture](architecture/soc-architecture.png)
 
 Log Collection
 
